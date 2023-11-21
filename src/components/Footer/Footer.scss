@@ -1,0 +1,46 @@
+.footer {
+    margin-top: 70px;
+    background: #1F1F1F;
+    padding: 30px 50px 81px 50px;
+    @include media($sm) {
+        margin-top: 40px;
+        padding: 30px;
+    }
+    
+    &__menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        flex-wrap: wrap;
+        margin-bottom: 50px;
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 30px;
+        @include media($sm) {
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+    }
+    
+    &__desc {
+        color: #A5A5A5;
+        font-family: $font-mon;
+        font-size: 20px;
+        font-weight: 300;
+        margin-bottom: 20px;
+        @include media($sm) {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+    }
+    
+    &__img {
+        display: block;
+        margin: auto;
+        margin-top: 81px;
+        @include media($sm) {
+            margin-top: 30px;
+            max-width: 150px;
+        }
+    }
+}

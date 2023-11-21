@@ -1,0 +1,86 @@
+.topRated {
+    background: #fff;
+    padding-top: 30px;
+    padding-bottom: 89px;
+    color: #141414;
+    @include media($sm) {
+        padding-bottom: 50px;
+    }
+    
+    &__title {
+        font-family: $font-mon;
+        font-size: 30px;
+        font-style: italic;
+        line-height: 30px; 
+        margin-left: 100px;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 88px;
+        @include media($sm) {
+            margin-left: 50px;
+            margin-bottom: 40px;
+        }
+        
+        span {
+            color: #149A03;
+            font-family: $font-mon-alt;
+            font-size: 50px;
+            font-style: normal;
+        }
+    }
+    
+    &__item {
+        border-radius: 10px;
+        background: #141414;
+        box-shadow: 0px 20px 15px -10px rgba(0, 0, 0, 0.25);
+        height: 463px;
+        overflow: hidden;
+        
+        @include media(650px){
+            height: 400px;
+        }
+        
+        @include media(500px){
+            height: 350px;
+        }
+        @include media(450px){
+            height: 300px;
+        }
+        @include media(450px){
+            height: 250px;
+        }
+    }
+    
+    &__img {
+        height: 100%;
+        width: 65%;
+        position: absolute;
+        right: 0;
+        top: 0;
+        object-fit: cover;
+    }
+    
+    &__content {
+        background: linear-gradient(90deg, #141414 37%, rgba(20, 20, 20, 0.00) 100%);
+        position: relative;
+        height: 100%;
+        color: #FFF;
+        font-family: $font-mon;
+        font-size: 150px;
+        font-style: italic;
+        font-weight: 700;
+        padding-left: 80px;
+        display: flex;
+        align-items: center;
+        
+        @include media($xs) {
+            font-size: 100px;
+            padding-left: 40px;
+        }
+    }
+    
+    .swiper-wrapper {
+        padding-bottom: 25px;
+    }
+}

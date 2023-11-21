@@ -1,0 +1,97 @@
+.header {
+    background: rgba(20, 20, 20, 0.50);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.50);
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    
+    &.color {
+        background: #000;
+    }
+
+    &__nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__menu {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        @include media($sm){
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background: rgba(20, 20, 20, 0.50);
+            margin-top: 1px;
+            flex-direction: column;
+            gap: 0;
+            min-width: 200px;
+            align-items: stretch;
+            transform: scaleY(0);
+            transition: 0.5s;
+            transform-origin: 0 0;
+            
+            &.active {
+                transform: scaleY(1);
+            }
+        }        
+    }
+
+    &__link {
+        color: rgba(255, 255, 255, 0.60);
+        font-size: 18px;
+        font-weight: 700;
+        transition: 0.5s;
+        padding: 25px 0;
+        display: block;
+        position: relative;
+        @include media($sm){
+            padding: 10px 35px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.50);
+        }
+
+        &::after {
+            content: '';
+            width: 15px;
+            height: 15px;
+            border-radius: 15px;
+            background: #149A03;
+            display: block;
+            position: absolute;
+            bottom: 0;
+            margin: 0 auto;
+            left: 0;
+            right: 0;
+            transform: scale(0);
+            transition: 0.5s;
+            @include media($sm) {
+                margin: auto 0;
+                top: 0;
+                left: 5px;
+            }
+        }
+
+        &:hover, &.active {
+            color: #fff;
+            
+            &::after {
+                transform: scale(1);
+            }
+        }
+    }
+    
+    &__burger {
+        background: none;
+        color: $color;
+        font-size: 25px;
+        display: none;
+        @include media($sm){
+            display: block;
+        }
+    }
+}

@@ -1,0 +1,43 @@
+.pagin {
+    padding-top: 40px;
+    
+    &_top {
+        padding-top: 0;
+        
+        .pagin__menu {
+            justify-content: flex-end;
+        }
+    }
+    
+    &__menu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        font-size: 20px;
+        font-family: $font-mon;
+        color: rgba(255, 255, 255, 0.5);
+    }
+    
+    &__btn {
+        transition: 0.5s;
+        padding: 5px 10px;
+        border-radius: 5px;
+        
+        &:hover {
+            color: #fff;
+            background: rgba(255, 255, 255, 0.2);
+        }
+    }
+    
+    &__num {
+        cursor: pointer;
+        padding: 5px 10px;
+        border-radius: 5px;
+        
+        &.active, &:hover {
+            background: rgba(255, 255, 255, 0.2);
+            color: #fff;
+        }
+    }
+}
