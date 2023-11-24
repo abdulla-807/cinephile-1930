@@ -1,1 +1,0 @@
-import{_ as e}from"./Single-efd54ce6.js";import{o as a,c as t,a as o}from"./index-e070ee04.js";const s={class:"main"},i={__name:"SerialId",setup(c){return(r,_)=>(a(),t("main",s,[o(e,{type:"tv"})]))}};export{i as default};
